@@ -1,0 +1,82 @@
+body {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #48c6ef;
+	margin: 0;
+}
+
+/*background red circle*/
+.logo {
+	height: 500px;
+	width: 500px;
+	background-color: #e31837;
+	border-radius: 50%; /*circle*/
+	position: relative;
+}
+
+/*curved line in letter G*/
+.logo .line-1 {
+	width: 400px;
+	height: 400px;
+	/*background-color: green;*/
+	border: 20px solid #fff;
+	border-radius: 50%;
+	border-right-color: transparent; /*make border right invisable*/
+	/*center*/
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%) rotate(-45deg); /*slight rotation for G*/
+}
+
+/* horizontal line in letter G */
+.logo .line-2 {
+	width: 150px;
+	height: 20px;
+	background-color: #fff;
+	position: absolute;
+	/*position to middle-right*/
+	top: 50%;
+	right: 30px;
+	transform: translateY(-50%);
+}
+
+/* small circle at top left */
+.logo .circle {
+	height: 50px;
+	width: 50px;
+	background-color: #fff;
+	border-radius: 50%; /*circle*/
+	/*position on top of logo in the top left*/
+	position: absolute;
+	top: 120px;
+	left: 130px;
+}
+
+/* long vertical line in letter L */
+.logo .line-3 {
+	position: absolute;
+	height: 250px;
+	width: 20px;
+	background-color: #fff;
+	/*position to mid-line*/
+	left: 240px;
+	top: 120px;
+	/*could also position this way:
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);*/
+}
+
+/* small horizontal line in letter L */
+.logo .line-4 {
+	position: absolute;
+	width: 70px;
+	height: 20px;
+	background-color: #fff;
+	/*position to bottom right*/
+	left: 240px;
+	top: 370px;
+}

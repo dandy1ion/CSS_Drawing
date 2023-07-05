@@ -1,0 +1,49 @@
+body {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	margin: 0;
+}
+
+.gear {
+	width: 110px;
+	height: 110px;
+	background-color: #5dc59d;
+	border-radius: 50%; /*circle*/
+}
+
+.gear-inner {
+	width: 55px;
+	height: 55px;
+	background-color: white;
+	border-radius: 50%; /*circle*/
+	position: absolute;
+	/*center in .gear circle*/
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.bar {
+	width: 170px;
+	height: 40px;
+	background-color: #5dc59d;
+	border-radius: 7px;
+	position: absolute;
+	/*center each peg of gear*/
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.bar:nth-child(2) {
+	/* keep centered with translate */
+	transform: translate(-50%, -50%) rotate(60deg); /*rotate to form top left and bottom right pegs*/
+}
+
+.bar:nth-child(3) {
+	/* keep centered with translate */
+	transform: translate(-50%, -50%) rotate(-60deg); /*rotate to form top right and bottom left pegs*/
+}

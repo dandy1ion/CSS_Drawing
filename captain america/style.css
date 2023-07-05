@@ -1,0 +1,85 @@
+body {
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	background-color: #002b82;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.c3 {
+	width: 260px;
+	height: 260px;
+	background-color: #ff4040;
+	border-radius: 50%; /*circle*/
+	/*center .c2*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.c2 {
+	width: 210px;
+	height: 210px;
+	background-color: white;
+	border-radius: 50%; /*circle*/
+	/*center .c1*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.c1 {
+	width: 150px;
+	height: 150px;
+	background-color: #ff4040;
+	border-radius: 50%; /*circle*/
+	/*center .center*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.center {
+	width: 100px;
+	height: 100px;
+	background-color: #306fd4;
+	border-radius: 50%; /*circle*/
+	position: relative;
+}
+
+/*applied to all 3 divs*/
+.arrow {
+	position: absolute;
+	border-top: 35px solid white;
+	/* border-left: 48px solid green; */
+	border-left: 48px solid transparent;
+	/* border-right: 48px solid pink; */
+	border-right: 48px solid transparent;
+	/* border-bottom: 48px solid brown; */
+	border-bottom: 48px solid transparent;
+	width: 0;
+	height: 0;
+}
+
+/*position each div to make star*/
+.top {
+	/*moves to bottom*/
+	top: 35px;
+	left: 2px;
+}
+
+.left {
+	/*moves to bottom & a little left, rotated to make right/top of star*/
+	top: 16px;
+	left: -24px;
+	transform: rotate(72deg);
+}
+
+.right {
+	/*moves to bottom & a little right, rotated to make left/top of star*/
+	top: 16px;
+	left: 24px;
+	transform: rotate(-72deg);
+}

@@ -1,0 +1,47 @@
+body {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: linear-gradient(135deg, #00a6b7 0%, #73fac9);
+}
+
+/*main blue circle with white border*/
+.pepsi {
+	height: 300px;
+	width: 300px;
+	background-color: #34588e;
+	border-radius: 50%; /*circle*/
+	border: 10px solid white;
+	position: relative;
+	overflow: hidden;
+}
+
+/*white wave portion of logo*/
+.pepsi:before {
+	content: "";
+	position: absolute;
+	height: 400px;
+	width: 500px;
+	border-radius: 25%; /*radius less than full circle*/
+	background-color: white;
+	/*position to the left top, rotated*/
+	top: -160px;
+	left: -240px;
+	transform: rotate(-18deg);
+}
+
+/*red portion of logo*/
+.pepsi:after {
+	position: absolute;
+	content: "";
+	height: 500px;
+	width: 550px;
+	border-radius: 50%; /*circle*/
+	background-color: #da473c;
+	/*position to top left*/
+	top: -275px;
+	left: -300px;
+}
+
+/*figure out positioning with inpector in browser*/

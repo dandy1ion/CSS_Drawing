@@ -1,0 +1,58 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: #333;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/*container sizing*/
+.logo {
+	width: 180px;
+	height: 270px;
+	/*background-color: blue;*/
+	/*have divs line up next to eachother...*/
+	display: flex;
+	/*...and overflow on to the next line*/
+	flex-wrap: wrap;
+}
+
+/*divs are block elements and sit in a line below eachother by default*/
+/*all divs same sizing*/
+.part {
+	width: 90px;
+	height: 90px;
+}
+
+/*add coloring and curves to each div individually*/
+.part-1 {
+	background-color: #ee4e2a;
+	border-top-left-radius: 50%;
+	border-bottom-left-radius: 50%;
+}
+
+.part-2 {
+	background: #fb7266;
+	border-top-right-radius: 50%;
+	border-bottom-right-radius: 50%;
+}
+
+.part-3 {
+	background: #a061fa;
+	border-top-left-radius: 50%;
+	border-bottom-left-radius: 50%;
+}
+
+.part-4 {
+	background: #2ebdfa;
+	border-radius: 50%; /*circle*/
+}
+
+.part-5 {
+	background: #00ce84;
+	border-top-left-radius: 50%;
+	border-bottom-left-radius: 50%;
+	border-bottom-right-radius: 50%;
+}

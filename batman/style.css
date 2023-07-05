@@ -1,0 +1,150 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-image: linear-gradient(60deg, #303030, #000000);
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/*yellow oval*/
+.oval {
+	width: 230px;
+	height: 130px;
+	background-color: #fdff00;
+	border-radius: 50%; /*oval due to longer width than height*/
+	position: relative;
+	/*center .logo*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+
+/*black oval*/
+.logo {
+	position: absolute;
+	width: 212px;
+	height: 112px;
+	background-color: black;
+	border-radius: 50%; /*oval due to longer width than height*/
+}
+
+.o1 {
+	position: absolute;
+	/* background-color: blue; */
+	background-color: #fdff00;
+	width: 33px;
+	height: 70px;
+	border-radius: 50%; /*oval*/
+	/*positioned to bottom left*/
+	top: 67px;
+	left: 44px;
+	transform: rotate(-41deg); /*slight angle tipped to left*/
+}
+
+.o2 {
+	position: absolute;
+	/* background-color: green; */
+	background-color: #fdff00;
+	width: 33px;
+	height: 70px;
+	border-radius: 50%;
+	/*positioned to bottom right*/
+	top: 67px;
+	right: 44px;
+	transform: rotate(41deg); /*slight angle tipped to right*/
+}
+
+.o3 {
+	position: absolute;
+	width: 38px;
+	height: 70px;
+	/* background-color: red; */
+	background-color: #fdff00;
+	border-radius: 50%; /*oval*/
+	/*positioned to bottom left next to .01*/
+	top: 73px;
+	left: 68px;
+	transform: rotate(-15deg); /*slight angle tipped to left*/
+}
+
+.o4 {
+	position: absolute;
+	width: 38px;
+	height: 70px;
+	/* background-color: purple; */
+	background-color: #fdff00;
+	border-radius: 50%; /*oval*/
+	/*positioned to bottom right next to .02*/
+	top: 73px;
+	right: 68px;
+	transform: rotate(15deg); /*slight angle tipped to right*/
+}
+
+.o5 {
+	position: absolute;
+	width: 37px;
+	height: 40px;
+	border-radius: 50%; /*oval almost circle*/
+	/* background-color: darkyellow; */
+	background-color: #fdff00;
+	/*positioned to top left*/
+	top: 0;
+	left: 57px;
+}
+
+.sq1 {
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	/* background-color: darkgrey; */
+	background-color: #fdff00;
+	/*positioned to top left on top, right edge of .05*/
+	top: 0;
+	left: 74px;
+}
+
+.o6 {
+	position: absolute;
+	width: 37px;
+	height: 40px;
+	border-radius: 50%; /*oval almost circle*/
+	/* background-color: grey; */
+	background-color: #fdff00;
+	/*positioned to the top right*/
+	top: 0;
+	right: 57px;
+}
+
+.sq2 {
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	/*background-color: orange*/
+	background-color: #fdff00;
+	/*positioned to top right on top, left edge of .06*/
+	top: 0;
+	right: 74px;
+}
+
+.ears {
+	position: absolute;
+	/*position to middle top*/
+	top: 0;
+	left: 95px;
+	border-bottom: 12px solid #fdff00; /*yellow trapazoid*/
+	border-left: 6px solid black; /*black triangle*/
+	border-right: 6px solid black; /*black triangle*/
+	width: 11px;
+	transform: rotate(180deg); /*flip vertically*/
+}
+
+/* .test {
+    border-bottom: 20px solid green;
+    border-top: 20px solid green;
+    border-left: 20px solid green;
+    border-right: 20px solid green;
+    width: 40px;
+} */

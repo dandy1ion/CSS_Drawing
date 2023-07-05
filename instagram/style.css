@@ -1,0 +1,60 @@
+body {
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	font-family: verdana;
+	background: #f7f7f7;
+}
+
+.logo {
+	height: 200px;
+	width: 200px;
+	border-radius: 60px; /*rounded corners*/
+	background: radial-gradient(
+		circle at 30% 107%,
+		#fdf497 0%,
+		#fdf497 5%,
+		#fd5949 45%,
+		#d6249f 60%,
+		#285aeb 90%
+	); /*radial=circle*/
+	/*center .square*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.square {
+	width: 140px;
+	height: 140px;
+	background-color: transparent; /*just want to see the border & background*/
+	border: 12px solid white;
+	border-radius: 45px; /*rounded corners*/
+	position: relative;
+	/*center .circle-big*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.circle-big {
+	height: 60px;
+	width: 60px;
+	background-color: transparent; /*just want to see the border & background*/
+	border: 12px solid white;
+	border-radius: 50%; /*circle*/
+}
+
+.circle-small {
+	height: 15px;
+	width: 15px;
+	background-color: white;
+	border-radius: 50%; /*circle*/
+	position: absolute;
+	/*position top right*/
+	top: 15px;
+	right: 15px;
+}

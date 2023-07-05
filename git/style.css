@@ -1,0 +1,76 @@
+body {
+	padding: 0;
+	margin: 0;
+	background: #f2f2f2;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* orange background (rotate45deg) */
+.git {
+	width: 150px;
+	height: 150px;
+	background-color: #f05033;
+	border-radius: 15px;
+	position: relative;
+	transform: rotate(45deg);
+}
+
+/* horizontal line with 2-circles */
+.line1 {
+	width: 110px;
+	height: 12px;
+	background-color: white;
+	position: absolute;
+	top: 40px; /*move toward bottom*/
+}
+
+/* circle mid-line*/
+.line1:before {
+	content: "";
+	width: 30px;
+	height: 30px;
+	background-color: white;
+	border-radius: 50%; /* circle */
+	position: absolute;
+	left: 30px;
+	top: -8px;
+}
+
+/* circle end-line*/
+.line1:after {
+	content: "";
+	width: 30px;
+	height: 30px;
+	background-color: white;
+	border-radius: 50%; /* circle */
+	position: absolute;
+	left: 90px;
+	top: -8px;
+}
+
+/* line at 45deg angle with circle */
+.line2 {
+	width: 90px;
+	height: 12px;
+	background-color: white;
+	position: absolute;
+	top: 70px;
+	left: 30px;
+	/*rotate line2:before*/
+	transform: rotate(45deg);
+}
+
+/* circle end-line*/
+.line2:before {
+	content: "";
+	width: 30px;
+	height: 30px;
+	background-color: white;
+	border-radius: 50%; /*circle*/
+	position: absolute;
+	left: 70px;
+	top: -8px;
+}

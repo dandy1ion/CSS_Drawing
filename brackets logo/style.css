@@ -1,0 +1,47 @@
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #222;
+}
+
+/*main sizing/use shadow to create light blue border & 3-D effect with dark blue*/
+.brackets {
+	width: 200px;
+	height: 175px;
+	background-color: white;
+	border-radius: 31px; /*rounded corners*/
+	position: relative; /*moves .brackets:before into the middle, instead of over top*/
+	box-shadow: 0 0 0 28px #28a9e1, 0 28px 0 28px #115a91;
+	/*dark blue shadow has vertical shift 28px to the bottom*/
+	/*horizontal, vertical, blur, distance/thickness*/
+}
+
+.brackets:before {
+	content: "";
+	width: 50%;
+	height: 44%;
+	position: absolute;
+	/*background-color: red;*/
+	/*center*/
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 28px solid #4d4d4d;
+}
+
+/*line through middle*/
+.brackets:after {
+	content: "";
+	width: 10%;
+	height: 100%;
+	/*background-color: green*/
+	background-color: white;
+	position: absolute;
+	/*center*/
+	left: 50%;
+	transform: translateX(-50%);
+}

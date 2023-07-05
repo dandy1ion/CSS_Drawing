@@ -1,0 +1,344 @@
+body {
+	padding: 0;
+	margin: 0;
+	height: 100vh;
+	background-color: #f0efed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.frame {
+	width: 350px;
+	height: 420px;
+	background-color: #ecc6c7;
+	border: 20px solid white;
+	position: relative;
+}
+
+.body {
+	position: absolute;
+	width: 70%;
+	height: 90%;
+	background-color: #a35a37;
+	bottom: 0; /*drop to bottom*/
+	left: 50%; /*move to right / left 50% of frame*/
+	transform: translateX(-50%); /*center horizontally*/
+	border-radius: 50% 50% 0 0; /*round top left & right corners*/
+	/*top-left, top-right, bottom-right, bottom-left*/
+}
+
+.arm-left {
+	position: absolute;
+	width: 45%;
+	height: 20%;
+	background-color: #7a3b1a;
+	/*position to bottom left*/
+	left: 0;
+	bottom: 10%;
+	border-radius: 0 50px 50px 0; /*round top-right & bottom-right corners*/
+	transform: skewY(5deg); /*tilt slightly*/
+}
+
+.arm-right {
+	position: absolute;
+	width: 45%;
+	height: 20%;
+	background-color: #7a3b1a;
+	/*position to bottom right*/
+	right: 0;
+	bottom: 10%;
+	border-radius: 50px 0px 0px 50px; /*round top-left & bottom-left corners*/
+	transform: skewY(-5deg); /*tilt slightly*/
+}
+
+.bow {
+	position: absolute;
+	width: 30px;
+	height: 25px;
+	background-color: #f0d0d1;
+	/*position to top right*/
+	right: 25%;
+	top: 8%;
+	border-radius: 50% 15% 15% 50%;
+	transform: rotate(10deg); /*tilt slightly*/
+}
+
+.bow:before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #f0d0d1;
+	border-radius: 15% 50% 50% 15%;
+	left: -30px; /*move to left of .bow*/
+}
+
+.heart {
+	position: absolute;
+	width: 85px;
+	height: 85px;
+	background-color: #f0d0d1;
+	/*center at bottom*/
+	top: 70%;
+	left: 50%;
+	transform: translateX(-50%) rotate(45deg); /*rotate to have heart in upright position*/
+}
+
+/*circle of top right of heart*/
+.heart:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	/*background-color: white;*/
+	background-color: #f0d0d1;
+	transform: translateY(-50%); /*move to top 1/2 it's height*/
+	border-radius: 50%; /*circle*/
+}
+
+/*circle of top left of heart*/
+.heart:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	/*background-color: green;*/
+	background-color: #f0d0d1;
+	transform: translateX(-50%); /*move to left 1/2 it's width*/
+	border-radius: 50%; /*circle*/
+}
+
+.eye-left {
+	position: absolute;
+	width: 20px;
+	height: 10px;
+	border: 3px solid #3c2114;
+	border-top: 0; /*remove top borders*/
+	/*round bottom borders*/
+	border-bottom-left-radius: 100px;
+	border-bottom-right-radius: 100px;
+	/*position*/
+	top: 35%;
+	left: 32%;
+}
+
+.eye-right {
+	position: absolute;
+	width: 20px;
+	height: 10px;
+	border: 3px solid #3c2114;
+	border-top: 0; /*remove top borders*/
+	/*round bottom borders*/
+	border-bottom-left-radius: 100px;
+	border-bottom-right-radius: 100px;
+	/*position*/
+	top: 35%;
+	right: 32%;
+}
+
+/*middle lash*/
+.lashes {
+	position: absolute;
+	width: 2px;
+	height: 8px;
+	background-color: #3c2114;
+	bottom: -8px;
+	left: 48%;
+}
+
+/*left lash*/
+.lashes::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #3c2114;
+	/*position*/
+	left: -10px; /*move to left of middle lash*/
+	top: -2px; /*move up slightly to meet curved line of eye*/
+	transform: rotate(20deg); /*slight tilt to the right*/
+}
+
+/*right lash*/
+.lashes::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #3c2114;
+	/*position*/
+	right: -10px; /*move to right of middle lash*/
+	top: -2px; /*move up slightly to meet curved line of eye*/
+	transform: rotate(-20deg); /*slight tilt to the left*/
+}
+
+.muzzle {
+	position: absolute;
+	width: 87px;
+	height: 55px;
+	background-color: #ffd49d;
+	/*position*/
+	top: 45%;
+	left: 27%;
+	border-radius: 50px 0 0 50px;
+	transform: rotate(-10deg); /*tilt to the left*/
+}
+
+/*pseudo-element*/
+.muzzle::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #ffd49d;
+	left: 100%;
+	border-radius: 0 50px 50px 0;
+	transform: rotate(20deg);
+	/*position to meet at top left corner*/
+	transform-origin: left top;
+}
+
+.nose {
+	position: absolute;
+	width: 56px;
+	height: 42px;
+	background-color: #3c2114;
+	/*position center on muzzle top*/
+	left: 42%;
+	top: 42%;
+	/*rounded*/
+	border-radius: 100% 100% 40% 40%;
+	/*top-left, top-right, bottom-right, bottom-left*/
+}
+
+.teeth {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	background-color: white;
+	/*position to center below muzzle*/
+	left: 44%;
+	top: 53%;
+	border-radius: 5px; /*slightly rounded corners*/
+}
+
+/*line separating teeth*/
+.teeth::before {
+	content: "";
+	position: absolute;
+	width: 2px;
+	height: 100%;
+	background-color: #a35a37;
+	/*center*/
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+/*top-left whisker*/
+.whiskers-left {
+	position: absolute;
+	width: 105px;
+	height: 2px;
+	background-color: #7a3b1a;
+	/*position*/
+	left: 10%;
+	top: 48%;
+	transform: rotate(10deg); /*rotate clockwise*/
+}
+
+/*middle-left whisker*/
+.whiskers-left::before {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-color: #7a3b1a;
+	/*position*/
+	top: 15px; /*bellow first whisker*/
+	left: 2px; /*move in to right slightly*/
+	transform: rotate(-10deg); /*rotate back to horizontal line*/
+}
+
+/*bottom-left whisker*/
+.whiskers-left::after {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-color: #7a3b1a;
+	/*position*/
+	top: 30px; /*bellow first & second whisker*/
+	left: 5px; /*move in to right slightly more*/
+	transform: rotate(-20deg); /*rotate counter-clockwise*/
+}
+
+/*top-right whisker*/
+.whiskers-right {
+	position: absolute;
+	width: 105px;
+	height: 2px;
+	background-color: #7a3b1a;
+	/*position*/
+	right: 10%;
+	top: 48%;
+	transform: rotate(-10deg); /*rotate counter-clockwise*/
+}
+
+/*middle-right whisker*/
+.whiskers-right::before {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-color: #7a3b1a;
+	/*position*/
+	top: 15px; /*bellow first whisker*/
+	left: -2px; /*move in to left slightly*/ /*can also use right:2px;*/
+	transform: rotate(10deg); /*rotate back to horizontal line*/
+}
+
+/*bottom-right whisker*/
+.whiskers-right::after {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-color: #7a3b1a;
+	/*position*/
+	top: 30px; /*bellow first & second whisker*/
+	left: -5px; /*move in to left slightly more*/ /*can also use right:5px;*/
+	transform: rotate(20deg); /*rotate clockwise*/
+}
+
+.ear-left {
+	position: absolute;
+	width: 38px;
+	height: 46px;
+	background-color: #f0a77e;
+	border: 8px solid #a35a37;
+	/*position*/
+	top: 15%;
+	left: 18%;
+	border-radius: 50%;
+	transform: rotate(45deg);
+	/* transform: rotate(-45deg); */
+}
+
+.ear-right {
+	position: absolute;
+	width: 38px;
+	height: 46px;
+	background-color: #f0a77e;
+	border: 8px solid #a35a37;
+	/*position*/
+	top: 15%;
+	right: 18%;
+	border-radius: 50%;
+	transform: rotate(-45deg);
+	/* transform: rotate(45deg); */
+}

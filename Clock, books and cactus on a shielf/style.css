@@ -1,0 +1,268 @@
+body {
+	background: #ecd590;
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.shelf {
+	width: 520px; /*long*/
+	height: 20px; /*narrow*/
+	background-color: #5a3f21;
+	position: relative;
+}
+
+/*CLOCK*/
+.clock {
+	width: 110px;
+	height: 110px;
+	background-color: #e9e6c9;
+	border: 10px solid #5aa668;
+	border-radius: 50%; /*circle*/
+	/*position on top left of shelf*/
+	position: absolute;
+	left: 30px;
+	top: -135px;
+}
+
+/*center of clock*/
+.knot {
+	width: 10px;
+	height: 10px;
+	background-color: #9d374f;
+	border-radius: 50%; /*circle*/
+	/*center*/
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 9; /*keep on top of other elements*/
+}
+
+/*general styles for 3-hands of clock*/
+.hand {
+	width: 4px;
+	height: 50px;
+	background-color: #47321a;
+	/*center*/
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(
+		-50%,
+		-100%
+	); /*100% shift toward top with bottom attached to knot*/
+	transform-origin: bottom; /*use bottom as hinge point*/
+}
+
+.hour-hand {
+	height: 30px; /*make shorter*/
+	transform: translate(-50%, -100%) rotate(45deg);
+}
+
+.min-hand {
+	height: 40px; /*make longer*/
+	width: 3px; /*make slightly thinner*/
+	transform: translate(-50%, -100%) rotate(160deg);
+}
+
+.second-hand {
+	height: 47px; /*make longest*/
+	width: 2px; /*make thinnest*/
+	transform: translate(-50%, -100%) rotate(-40deg);
+}
+
+.clock-ear-left {
+	height: 30px;
+	width: 60px;
+	background-color: #5aa668;
+	/*position*/
+	position: absolute;
+	left: -38px;
+	top: -12px;
+	border-radius: 90px 90px 0 0; /*rounded top-left and top-right corners*/
+	transform: rotate(-50deg); /*counter-clockwise/left*/
+}
+
+.clock-ear-left:after {
+	content: "";
+	width: 15px;
+	height: 8px;
+	background-color: #9d374f;
+	/*position to center of left-ear top*/
+	position: absolute;
+	top: -9px;
+	left: 23px;
+	border-radius: 90px 90px 0 0; /*rounded top-left and top-right corneres*/
+}
+
+.clock-ear-right {
+	height: 30px;
+	width: 60px;
+	background-color: #5aa668;
+	position: absolute;
+	/*position*/
+	right: -38px;
+	top: -12px;
+	border-radius: 90px 90px 0 0; /*rounded top-left and top-right corners*/
+	transform: rotate(50deg); /*clockwise/right*/
+}
+
+.clock-ear-right:after {
+	content: "";
+	width: 15px;
+	height: 8px;
+	background-color: #9d374f;
+	/*position to center of right-ear top*/
+	position: absolute;
+	top: -9px;
+	right: 23px;
+	border-radius: 90px 90px 0 0; /*rounded top-left and top-right corneres*/
+}
+
+.clock-foot-left {
+	height: 50px;
+	width: 12px;
+	background-color: #47321a;
+	/*position*/
+	position: absolute;
+	left: 20px;
+	bottom: -25px;
+	transform: rotate(30deg); /*clockwise/right*/
+	z-index: -1; /*position behind other elements*/
+}
+
+.clock-foot-right {
+	height: 50px;
+	width: 12px;
+	background-color: #47321a;
+	/*position*/
+	position: absolute;
+	right: 20px;
+	bottom: -25px;
+	transform: rotate(-30deg); /*counter-clockwise/left*/
+	z-index: -1; /*position behind other elements*/
+}
+
+/*BOOKS*/
+.book-1 {
+	width: 40px;
+	height: 170px;
+	background-color: #9d374f;
+	/*positon on top of shelf to the right of the clock*/
+	position: absolute;
+	left: 210px;
+	top: -170px;
+}
+
+/*band on book*/
+.book-1::before,
+.book-2::before,
+.book-3::before {
+	content: "";
+	width: 100%;
+	height: 20px; /*thin portion*/
+	background-color: #e9e6c9;
+	position: absolute;
+	top: 20px; /*move down from top*/
+	left: 0; /*even with left side of book*/
+}
+
+/*shadow on book*/
+.book-1::after,
+.book-2::after,
+.book-3::after {
+	content: "";
+	width: 50%; /*take up 1/2 of width of book*/
+	height: 100%;
+	background-color: black;
+	opacity: 0.15; /*see through*/
+	/*position on right side of book*/
+	position: absolute;
+	top: 0; /*even with top of book*/
+	right: 0; /*even with right side of book*/
+}
+
+.book-2 {
+	width: 40px;
+	height: 195px;
+	background-color: #e86830;
+	/*positon on top of shelf to the right of the clock&book-1*/
+	position: absolute;
+	left: 250px;
+	top: -195px;
+}
+
+.book-3 {
+	width: 40px;
+	height: 180px;
+	background-color: #5aa668;
+	/*positon on top of shelf to the right of the clock,book-1,&book-2*/
+	position: absolute;
+	left: 290px;
+	top: -180px;
+}
+
+/*CUCTUS*/
+.cactus {
+	width: 100px;
+	height: 180px;
+	/* background-color: red; */
+	/*position on top of shelf to the right of all the other elements*/
+	position: absolute;
+	left: 380px;
+	top: -180px;
+}
+
+.pot {
+	width: 100%;
+	height: 50%;
+	/*position*/
+	position: absolute;
+	bottom: 0; /*even with bottom of .cactus*/
+	/* background-color: blue; */
+}
+
+.pot-bottom {
+	width: 100%;
+	height: 70%;
+	background-color: #ce4f17;
+	/*position*/
+	position: absolute;
+	bottom: 0; /*even with bottom of .cactus*/
+}
+
+.pot-top {
+	width: 140%; /*wider than pot*/
+	height: 30%;
+	background-color: #a03d12;
+	/*position*/
+	position: absolute;
+	top: 0; /*even with top of .pot*/
+	left: -20%; /*center with pot*/
+}
+
+.plant-left {
+	width: 45%;
+	height: 35%;
+	background-color: #5aa668;
+	/*position*/
+	position: absolute;
+	bottom: 50%; /*shift to bottom*/
+	left: 5%; /*move in slightly from left so it's seen as coming out of the pot base*/
+	border-radius: 50px 50px 0 0; /*rounded top-left & top-right corners*/
+}
+
+.plant-right {
+	width: 45%;
+	height: 50%;
+	background-color: #5aa668;
+	/*position*/
+	position: absolute;
+	bottom: 50%; /*shift to bottom*/
+	right: 5%; /*move in slightly from right so it's seen as coming out of the pot base*/
+	border-radius: 50px 50px 0 0; /*rounded top-left & top-right corners*/
+}

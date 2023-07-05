@@ -1,0 +1,47 @@
+body {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+}
+
+/*container sizing*/
+.adidas {
+	width: 206px;
+	height: 120px;
+	/* background-color: red; */
+	position: relative;
+	overflow: hidden;
+}
+
+/*each div*/
+.shape {
+	width: 46px;
+	height: 150px;
+	background-color: #111;
+	position: absolute; /*sit on top of eachother, appear as one div*/
+	transform: rotate(-31deg); /*rotate to left*/
+}
+
+/*position each div individually*/
+/*furthest left and smallest amount showing*/
+.s1 {
+	top: 86px;
+	left: 36px;
+	background-color: blue;
+}
+
+/*middle and mid-amount showing*/
+.s2 {
+	top: 45px;
+	left: 82px;
+	background-color: yellow;
+}
+
+/* furthest right and most showing */
+.s3 {
+	top: 4px;
+	left: 129px;
+	background-color: green;
+}
